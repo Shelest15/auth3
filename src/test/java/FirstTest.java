@@ -3,11 +3,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pageobjects.BaseTest;
+import pageobjects.SignUpPage;
 
 import java.util.concurrent.TimeUnit;
 
-public class FirstTest {
-    public static void main(String[] args) throws Exception {
+public class FirstTest extends BaseTest {
+
+    //SignUpPage su = new SignUpPage();
+
+    /*public static void main(String[] args) throws Exception {
         System.setProperty("webdriver.chrome.driver", "C:\\Chrome_driver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -49,5 +54,5 @@ public class FirstTest {
 
         Thread.sleep(5000);
         driver.quit();
-    }
+    }*/
 }

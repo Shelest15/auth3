@@ -1,11 +1,14 @@
 package pageobjects;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SignUpPage {
+public class SignUpPage extends BasePage{
 
-
+    public SignUpPage(WebDriver driver){
+        super(driver);
+    }
 
     @FindBy(xpath="/html/body/center/table/tbody/tr[5]/td/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]/input")
     private WebElement zipCodeField;
