@@ -1,4 +1,6 @@
+import Steps.SignUpSteps;
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +12,16 @@ import java.util.concurrent.TimeUnit;
 
 public class FirstTest extends BaseTest {
 
-    //SignUpPage su = new SignUpPage();
+    SignUpSteps su = new SignUpSteps();
+
+    @Test
+    public void signUp() throws Exception{
+        su.navigateToSignUpForm();
+        su.enterZipCode();
+
+        WebElement elementSuccess = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[4]/td/span"));
+        Assert.assertEquals("Account is created!", elementSuccess.getText());
+    }
 
     /*public static void main(String[] args) throws Exception {
         System.setProperty("webdriver.chrome.driver", "C:\\Chrome_driver\\chromedriver.exe");
