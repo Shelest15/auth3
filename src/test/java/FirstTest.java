@@ -15,5 +15,6 @@ public class FirstTest extends BaseTest {
         Assert.assertEquals("Account is created!", su.checkThatConfirmationMessageAppears());
         System.out.println("Email: "+su.getEmail());
         System.out.println("Password: "+su.getPassword());
+        Thread.sleep(5000);
     }
 }
