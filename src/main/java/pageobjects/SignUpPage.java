@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.awt.*;
+
 public class SignUpPage extends BasePage{
 
     public SignUpPage(WebDriver driver){
@@ -33,6 +35,14 @@ public class SignUpPage extends BasePage{
 
     @FindBy(xpath = "/html/body/center/table/tbody/tr[5]/td/table/tbody/tr[2]/td/table/tbody/tr[6]/td[2]/input")
     private WebElement registerBtn;
+
+    @FindBy(xpath = "/html/body/center/table/tbody/tr[4]/td/span")
+    private WebElement getTextConfirmationMessage;
+
+    @FindBy(xpath = "/html/body/center/table/tbody/tr[4]/td/span")
+    private WebElement elementSuccess;
+
+
 
 
     public void sendKeysZipCodeField(String a){
@@ -67,5 +77,7 @@ public class SignUpPage extends BasePage{
         registerBtn.click();
     }
 
-
+    public String getTextConfirmationMessage() {
+    return elementSuccess.getText();
+    }
 }

@@ -17,12 +17,26 @@ public class MainPage extends BasePage{
     @FindBy(xpath="/html/body/center/table/tbody/tr[3]/td/table/tbody/tr/td[4]/a")
     private WebElement signUpRef;
 
+    @FindBy(xpath="/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/b")
+    private WebElement getEmailText;
+
+    @FindBy(xpath="/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[4]/td/table/tbody/tr[2]/td[2]")
+    private WebElement getPasswordText;
+
     public void clickEnterBnt() {
-        enterBnt.click();
+    enterBnt.click();
     }
 
-    public void setSignUpRef() {
-        signUpRef.click();
+    public void clickSignUpRef() {
+    signUpRef.click();
+    }
+
+    public String getEmailText() {
+    return getEmailText.getText();
+    }
+
+    public String getPasswordText() {
+    return getPasswordText.getText();
     }
 }
 

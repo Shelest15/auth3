@@ -10,6 +10,7 @@ public class SignUpSteps extends BaseTest {
 
     public void navigateToSignUpForm() {
         mainPage.clickEnterBnt();
+        mainPage.clickSignUpRef();
     }
 
     public void enterZipCode() {
@@ -18,15 +19,15 @@ public class SignUpSteps extends BaseTest {
     }
 
     public void enterMainData() {
-        signUpPage.sendKeysFirstName("qqqq");
-        signUpPage.sendKeysLastName("wwww");
-        signUpPage.sendKeysEMail("eeee@example.com");
+        signUpPage.sendKeysFirstName("Alex");
+        signUpPage.sendKeysLastName("Test");
+        signUpPage.sendKeysEMail("alextest@mail.su");
         signUpPage.sendKeysPswrd1("1111");
         signUpPage.sendKeysPswrd2("1111");
         signUpPage.clickRegisterBtn();
     }
 
-    /*public String checkThatConfirmationMessageAppears() {
+    public String checkThatConfirmationMessageAppears() {
         return signUpPage.getTextConfirmationMessage();
     }
 
@@ -35,6 +36,7 @@ public class SignUpSteps extends BaseTest {
     }
 
     public String getPassword() {
-        return mainPage.getPasswordText();*/
+        return mainPage.getPasswordText();
+    }
 }
 
