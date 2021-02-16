@@ -13,13 +13,13 @@ public class BaseTest {
 
     @BeforeClass
     public static void setUp() throws Exception{
-        /*
-        System.setProperty("webdriver.chrome.driver", "C:\\Chromedriver\\chromedriver.exe");
-        driver = newChromeDriver();
-        */
 
-        System.setProperty("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\Chromedriver\\chromedriver.exe");
+        driver = new ChromeDriver();
+
+
+        /*System.setProperty("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe");
+        driver = new FirefoxDriver();*/
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
