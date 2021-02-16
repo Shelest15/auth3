@@ -22,8 +22,8 @@ public class SignUpSteps extends BaseTest {
         signUpPage.sendKeysFirstName("Alex");
         signUpPage.sendKeysLastName("Test");
         signUpPage.sendKeysEMail("alextest@mail.su");
-        signUpPage.sendKeysPswrd1("1111");
-        signUpPage.sendKeysPswrd2("1111");
+        signUpPage.sendKeysPswrd1("12345");
+        signUpPage.sendKeysPswrd2("12345");
         signUpPage.clickRegisterBtn();
     }
 

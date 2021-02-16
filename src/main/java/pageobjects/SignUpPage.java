@@ -36,9 +36,6 @@ public class SignUpPage extends BasePage{
     private WebElement registerBtn;
 
     @FindBy(xpath = "/html/body/center/table/tbody/tr[4]/td/span")
-    private WebElement getTextConfirmationMessage;
-
-    @FindBy(xpath = "/html/body/center/table/tbody/tr[4]/td/span")
     private WebElement elementSuccess;
 
 
